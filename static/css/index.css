@@ -1,0 +1,48 @@
+.navbar {
+	padding: 0.5rem 10rem;
+}
+
+.nav-menus {
+	flex: 1;
+}
+
+.main {
+	padding: 3rem 10rem;
+}
+
+.book-list {
+	letter-spacing: -4px;
+	word-spacing: -4px;
+}
+
+.book-card {
+	width: 25%;
+	padding: 1%;
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+}
+
+.book-card-info {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 5% 10%;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 10px 0px #CCCCCC;
+	transition: all 0.1s ease-in-out;
+	cursor: pointer;
+}
+
+.book-card-info:hover {
+	background: #4582EC !important;
+	color: #FFFFFF;
+}
+
+.page {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.page-num {
+	display: inline-block;
+}
