@@ -1,0 +1,58 @@
+.book-list {
+	letter-spacing: -4px;
+	word-spacing: -4px;
+}
+
+.book-card-model {
+	display: none;
+}
+
+.book-card {
+	width: 25%;
+	padding: 1%;
+	letter-spacing: normal;
+	word-spacing: normal;
+	display: inline-block;
+}
+
+.book-card-info {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 5% 10%;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 10px 0px #CCCCCC;
+	transition: all 0.1s ease-in-out;
+	cursor: pointer;
+}
+
+.book-card-info:hover {
+	background: #4582EC !important;
+	color: #FFFFFF;
+}
+
+.book-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.page {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.page-num {
+	display: inline-block;
+}
+
+.per-page {
+	display: inline-block;
+}
+
+.per-page-select {
+	display: inline-block;
+	width: auto;
+	padding: 0.5rem 0.75rem;
+	line-height: 1.25;
+	font-size: 0.875em;
+}

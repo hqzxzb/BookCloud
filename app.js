@@ -7,46 +7,51 @@ app.get('/test', function(req, res) {
 	res.send('Hello World!');
 });
 
+app.get('/query/book/count', function(req, res) {
+	res.json({
+		count: 100
+	});
+});
+
 app.get('/query/book/list', function(req, res) {
-	res.json([
-		{
-			title:"Book Title",
-			author:"ZHAO BO",
+	res.json([{
+			title: "Book " + req.query.page,
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		},
 		{
-			title:"Book Title",
-			author:"ZHAO BO",
+			title: "Book Title",
+			author: "ZHAO BO",
 			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
 		}
 	]);

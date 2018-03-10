@@ -1,37 +1,20 @@
 var index = function() {};
 
-/**
- * Query Book List for Explore page.
- */
-index.queryExploreBookList = function(page, pageSize) {
-	common.loading.start();
-	$.ajax({
-		type: "get",
-		url: "/query/book/list",
-		async: true,
-		data: {
-			"page": page,
-			"pageSize": pageSize
-		},
-		dataType: "JSON",
-		success: function(data) {
-			$(".book-list").children().remove();
-			var bookCardModel = $(".book-card-model .book-card");
-			for(var i = 0; i < data.length; i++) {
-				var bookCard = $(bookCardModel).clone();
-				$(bookCard).find(".book-title").html(data[i].title);
-				$(bookCard).find(".book-author").html(data[i].author);
-				$(bookCard).find(".book-introduction").html(data[i].introduction);
-				$(".book-list").append(bookCard);
-			}
-		},
-		error: function() {
+index.init = function() {
+	var navNow = window.location.hash.substring(1);
+	nav.goNav(navNow == "" ? "explore" : navNow);
+	
+	$("#explore").on("click", function() {
+		nav.goNav("explore");
+	});
 
-		},
-		complete: function() {
-			common.loading.end();
-		}
+	$("#login").on("click", function() {
+		nav.goNav("login");
+	});
+	
+	$("#register").on("click", function() {
+		nav.goNav("register");
 	});
 };
 
-index.queryExploreBookList(1, 1);
+index.init();

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/explore.css" />
+	</head>
+
+	<body>
+		<div class="book-card-model">
+			<div class="book-card">
+				<div class="book-card-info border-primary">
+					<h2 class="book-title">{title}</h2>
+					<h6 class="book-author">{author}</h6>
+					<p class="book-introduction">{introduction}</p>
+				</div>
+			</div>
+		</div>
+		<div class="book-list">
+
+		</div>
+		<div class="page">
+			<div class="page-num">
+				<ul class="pagination">
+					<li class="page-item disabled pre-page">
+						<a class="page-link" href="#">Pre Page</a>
+					</li>
+					<li class="page-item">
+						<a class="page-link"><span id="pageNum">0</span>/<span id="pageCount">0</span></a>
+					</li>
+					<li class="page-item next-page">
+						<a class="page-link" href="#">Next Page</a>
+					</li>
+				</ul>
+			</div>
+			<div class="form-group per-page">
+				<select class="form-control  per-page-select" id="perPage">
+					<option value="20">20</option>
+					<option value="40">40</option>
+					<option value="60">60</option>
+				</select>
+				<label for="perPage">per page</label>
+			</div>
+		</div>
+
+		<!-- Load JavaScript -->
+		<script src="js/explore.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
