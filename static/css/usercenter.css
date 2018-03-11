@@ -1,0 +1,70 @@
+.user-info,
+.user-content {
+	padding: 5%;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 10px 0px #CCCCCC;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.user-content {
+	display: flex;
+}
+
+.user-menus {
+	width: 25%;
+	padding-right: 1%;
+}
+
+.user-menus li {
+	transition: all 0.1s ease-in-out;
+	cursor: pointer;
+}
+
+.user-menus li:hover {
+	background: #4582EC !important;
+	color: #FFFFFF;
+}
+
+.user-main {
+	flex: 1;
+}
+
+.user-book {
+	padding: 1%;
+	border-radius: 0.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid #CCCCCC;
+	box-shadow: 2px 2px 5px 0px #CCCCCC;
+}
+
+.user-book p {
+	margin-bottom: 0;
+}
+
+.user-book-model{
+	display: none;
+}
+
+.user-book-title {
+	display: flex;
+	border-bottom: 2px solid #CCCCCC;
+	margin-bottom: 0.5rem;
+}
+
+.user-book-title #title {
+	flex: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: 600;
+	font-size: 1.25rem;
+}
+
+.user-book-title #starredSum {
+	width: 10%;
+}
+
+.user-book-title #starredSum span {
+	color: #4582EC;
+}

@@ -10,6 +10,10 @@
 	flex: 1;
 }
 
+#usercenter{
+	display: none;
+}
+
 .main {
 	padding: 3rem 10rem;
 }

@@ -122,6 +122,9 @@ explore.queryExploreBookList = function(page, pageSize, callback) {
 				$(bookCard).find(".book-title").html(data[i].title);
 				$(bookCard).find(".book-author").html(data[i].author);
 				$(bookCard).find(".book-introduction").html(data[i].introduction);
+				$(bookCard).on("click", function() {
+					
+				});
 				$(".book-list").append(bookCard);
 			}
 			callback();

@@ -57,6 +57,50 @@ app.get('/query/book/list', function(req, res) {
 	]);
 })
 
+app.get('/query/user/book/list', function(req, res) {
+	res.json([{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		},
+		{
+			title: "Book Title",
+			star: 10,
+			introduction: "Some quick example text to build on the card title and make up the bulk of the card's content."
+		}
+	]);
+})
+
 var server = app.listen(3000, function() {
 	var host = server.address().address;
 	var port = server.address().port;

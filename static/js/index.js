@@ -15,6 +15,15 @@ index.init = function() {
 	$("#register").on("click", function() {
 		nav.goNav("register");
 	});
+	
+	$("#usercenter").on("click", function() {
+		nav.goNav("usercenter");
+	});
 };
 
 index.init();
+
+//Test Code
+$("#login").hide();
+$("#register").hide();
+$("#usercenter").show().find("b").html("hqzxzb");

@@ -1,10 +1,11 @@
 var nav = function() {};
 
 nav.list = {
-	"explore": "/explore.html",
-	"login": "/login.html",
-	"register": "/register.html",
-	"user": "/user.html"
+	"explore": "/views/explore.html",
+	"login": "/views/login.html",
+	"register": "/views/register.html",
+	"usercenter": "/views/usercenter/usercenter.html",
+	"bookInfo": "/views/book/bookInfo.html"
 };
 
 nav.loadNav = function() {
@@ -18,6 +19,10 @@ nav.goNav = function(navPage) {
 		window.location.hash = navPage;
 	}
 }
+
+nav.goNavWithQueryString = function(navPage, queryString) {
+	
+};
 
 $(window).on("hashchange", function() {
 	nav.loadNav();
