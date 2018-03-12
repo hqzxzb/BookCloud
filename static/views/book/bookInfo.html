@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="css/bookInfo.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bookInfo.css" />
 	</head>
+
 	<body>
-		<div class="book-info"></div>
-		
+		<div class="book-info">
+			<div class="book-info-meta">
+				<h2 class="book-title"></h2>
+				<h6 class="book-author">Author : <span></span></h6>
+				<p class="book-desc"></p>
+				<div class="book-create-time">Create Time : <span></span></div>
+				<div class="book-last-update-time">Last Update : <span></span></div>
+				<div class="book-starred">Star : <span></span></div>
+			</div>
+			<div class="book-readme">
+				<div class="book-tab">
+					<div class="book-readme-title">README</div>
+					<div class="book-read-btn">
+						<button type="button" class="btn btn-outline-primary" id="updateBook">Update</button>
+						<button type="button" class="btn btn-outline-danger" id="deleteBook">Delete</button>
+						<button type="button" class="btn btn-outline-success" id="starBook">Star</button>
+						<button type="button" class="btn btn-primary" id="readBook">Read</button></div>
+				</div>
+				<div class="book-readme-content">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+			</div>
+		</div>
+
 		<!-- Load JavaScript -->
 		<script src="js/bookInfo.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

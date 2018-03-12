@@ -42,3 +42,10 @@ common.loading = {
 		}, 500);
 	}
 };
+
+common.getQueryString = function(paramName) {
+	var reg = new RegExp("(^|&)" + paramName + "=([^&]*)(&|$)", "i");
+	var r = window.location.hash.substr(window.location.hash.indexOf("?") + 1).match(reg);
+	if(r != null) return unescape(r[2]);
+	return null;
+}

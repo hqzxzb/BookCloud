@@ -9,7 +9,11 @@ nav.list = {
 };
 
 nav.loadNav = function() {
-	$(".main").load(nav.list[window.location.hash.substring(1)]);
+	var navKey = window.location.hash.substring(1);
+	if(navKey.indexOf("?") > -1) {
+		navKey = navKey.substring(0, navKey.indexOf("?"));
+	}
+	$(".main").load(nav.list[navKey]);
 };
 
 nav.goNav = function(navPage) {
@@ -21,7 +25,11 @@ nav.goNav = function(navPage) {
 }
 
 nav.goNavWithQueryString = function(navPage, queryString) {
-	
+	if(window.location.hash.substring(1, window.location.hash.indexOf("?") - 1) == navPage) {
+		this.loadNav();
+	} else {
+		window.location.hash = navPage + "?" + queryString;
+	}
 };
 
 $(window).on("hashchange", function() {

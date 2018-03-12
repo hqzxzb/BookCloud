@@ -1,0 +1,27 @@
+.book-info {}
+
+.book-info-meta,
+.book-readme {
+	padding: 5%;
+	background: #FFFFFF;
+	box-shadow: 3px 3px 10px 0px #CCCCCC;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.book-tab {
+	display: flex;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 3px solid #CCCCCC;
+}
+
+.book-readme-title {
+	flex: 1;
+	line-height: 1.5;
+	padding: 0.5rem 0;
+}
+
+.book-read-btn {}
+
+.book-readme-content {}
