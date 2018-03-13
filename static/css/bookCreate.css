@@ -1,4 +1,4 @@
-.book-update {
+.book-create {
 	padding: 5%;
 	background: #FFFFFF;
 	box-shadow: 3px 3px 10px 0px #CCCCCC;
@@ -6,11 +6,11 @@
 	margin-bottom: 1rem;
 }
 
-.book-update button {
+.book-create button {
 	width: 30%;
 	margin: 5% 35%;
 }
 
-.book-update h2 {
+.book-create h2 {
 	margin-bottom: 2rem;
 }

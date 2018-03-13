@@ -5,7 +5,9 @@ nav.list = {
 	"login": "/views/login.html",
 	"register": "/views/register.html",
 	"usercenter": "/views/usercenter/usercenter.html",
-	"bookInfo": "/views/book/bookInfo.html"
+	"bookInfo": "/views/book/bookInfo.html",
+	"bookUpdate": "/views/book/bookUpdate.html",
+	"bookCreate": "/views/book/bookCreate.html"
 };
 
 nav.loadNav = function() {

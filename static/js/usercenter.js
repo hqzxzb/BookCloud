@@ -2,6 +2,10 @@
 var usercenter = function() {};
 
 usercenter.init = function() {
+	$("#createNewBook").on("click",function(){
+		nav.goNav("bookCreate");
+	});
+	
 	$("#userBooks").on("click", function() {
 		usercenter.menusChange("#userBooks");
 		$(".user-main").load("views/usercenter/userbooks.html", function() {
