@@ -7,9 +7,7 @@ exports.addBook = function(book, callback) {
 };
 
 exports.queryBookList = function(pageNum, pageSize, callback) {
-	var res = [];
 	bookDao.queryBookList(pageNum, pageSize, function(result) {
-		res = result;
+		callback(result);
 	});
-	return res;
 };

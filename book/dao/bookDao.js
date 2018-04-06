@@ -34,6 +34,7 @@ exports.queryBookList = function(pageNum, pageSize, callback) {
 			pageSize
 		], function(err, rows) {
 			if(err) {
+				console.log(err);
 				res = [];
 			} else {
 				for(var i in rows) {

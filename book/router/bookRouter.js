@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-
+var msg = require('../../message/msg.js');
 var bookService = require('../service/bookService.js');
 
 router.use(function(req, res, next) {
-  // .. some logic here .. like any other middleware
-  next();
+	// .. some logic here .. like any other middleware
+	next();
 });
 
 router.post('/create/add', function(req, res) {
@@ -20,22 +20,17 @@ router.post('/create/add', function(req, res) {
 
 	bookService.addBook(bookInfo, function(result) {
 		if(result) {
-			res.json({
-				code: "0000",
-				msg: "Add Book Success !"
-			});
+			res.json(msg.success("Add Book Success !"));
 		} else {
-			res.json({
-				code: "9999",
-				msg: "Add Book Failure !"
-			});
+			res.json(msg.failure("Add Book Failure !"));
 		}
 	});
 });
 
 router.get('/query/list', function(req, res) {
-	
-	res.json();
+	bookService.queryBookList(parseInt(req.query.pageNum), parseInt(req.query.pageSize), function(result) {
+		res.json(result);
+	});
 });
 
 module.exports = router;

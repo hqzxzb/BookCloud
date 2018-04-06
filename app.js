@@ -11,9 +11,7 @@ app.use(bodyParser.urlencoded({
 
 var bookRouter = require('./book/router/bookRouter.js');
 
-
 app.use('/book', bookRouter);
-
 
 app.get('/test', function(req, res) {
 	res.send('Hello World!');
@@ -24,7 +22,6 @@ app.get('/query/book/count', function(req, res) {
 		count: 100
 	});
 });
-
 
 app.get('/query/book/info', function(req, res) {
 	res.json({
@@ -92,8 +89,6 @@ app.get('/query/book/update/info', function(req, res) {
 		gitUsername: "test"
 	});
 });
-
-
 
 var server = app.listen(3000, function() {
 	var host = server.address().address;
