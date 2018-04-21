@@ -11,3 +11,21 @@ exports.queryBookList = function(pageNum, pageSize, callback) {
 		callback(result);
 	});
 };
+
+exports.queryBookCount = function(callback) {
+	bookDao.queryBookCount(function(result) {
+		callback(result);
+	});
+};
+
+exports.queryBookInfo = function(bookID, callback) {
+	bookDao.queryBookInfo(bookID, function(result) {
+		callback(result);
+	});
+};
+
+exports.queryBookInfoForUpdate = function(bookID, callback) {
+	bookDao.queryBookInfoForUpdate(bookID, function(result) {
+		callback(result);
+	});
+};

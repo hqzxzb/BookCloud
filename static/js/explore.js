@@ -25,6 +25,9 @@ explore.initPageBar = function(count) {
 	if(pages > 1) {
 		$(".pre-page").hasClass("disabled") ? null : $(".pre-page").addClass("disabled");
 		$(".next-page").hasClass("disabled") ? $(".next-page").removeClass("disabled") : null;
+	} else {
+		$(".pre-page").hasClass("disabled") ? null : $(".pre-page").addClass("disabled");
+		$(".next-page").hasClass("disabled") ? null : $(".next-page").addClass("disabled");
 	}
 
 	$(".pre-page").on("click", function() {
@@ -83,11 +86,11 @@ explore.queryExploreBookCount = function() {
 	var _this = this;
 	$.ajax({
 		type: "get",
-		url: "/query/book/count",
+		url: "/book/query/count",
 		async: true,
 		dataType: "JSON",
 		success: function(data) {
-			_this.initPageBar(data.count);
+			_this.initPageBar(data.data);
 		},
 		error: function() {
 
@@ -107,22 +110,22 @@ explore.queryExploreBookList = function(page, pageSize, callback) {
 	common.loading.start();
 	$.ajax({
 		type: "get",
-		url: "/query/book/list",
+		url: "/book/query/list",
 		async: true,
 		data: {
-			"page": page,
+			"pageNum": page,
 			"pageSize": pageSize
 		},
 		dataType: "JSON",
 		success: function(data) {
 			$(".book-list").children().remove();
 			var bookCardModel = $(".book-card-model .book-card");
-			for(var i = 0; i < data.length; i++) {
+			for(var i = 0; i < data.data.length; i++) {
 				var bookCard = $(bookCardModel).clone();
-				$(bookCard).find(".book-title").html(data[i].title);
-				$(bookCard).find(".book-author").html(data[i].author);
-				$(bookCard).find(".book-introduction").html(data[i].introduction);
-				$(bookCard).attr("data-bookID",data[i].bookID);
+				$(bookCard).find(".book-title").html(data.data[i].title);
+				$(bookCard).find(".book-author").html(data.data[i].author);
+				$(bookCard).find(".book-introduction").html(data.data[i].introduction);
+				$(bookCard).attr("data-bookID", data.data[i].bookID);
 				$(bookCard).on("click", function() {
 					nav.goNavWithQueryString("bookInfo", "bookID=" + $(this).attr("data-bookID"));
 				});

@@ -12,14 +12,14 @@ bookUpdate.getBookInfoForUpdate = function(bookID) {
 	common.loading.start();
 	$.ajax({
 		type: "get",
-		url: "/query/book/update/info",
+		url: "/book/query/update/info",
 		async: true,
 		data: {
 			"bookID": bookID
 		},
 		dataType: "JSON",
 		success: function(data) {
-			bookUpdate.initBookUpdateInfo(data);
+			bookUpdate.initBookUpdateInfo(data.data);
 		},
 		error: function() {
 

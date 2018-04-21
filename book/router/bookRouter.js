@@ -29,8 +29,27 @@ router.post('/create/add', function(req, res) {
 
 router.get('/query/list', function(req, res) {
 	bookService.queryBookList(parseInt(req.query.pageNum), parseInt(req.query.pageSize), function(result) {
-		res.json(result);
+		res.json(msg.success("Query book list success !", result));
 	});
 });
+
+router.get('/query/count', function(req, res) {
+	bookService.queryBookCount(function(result) {
+		res.json(msg.success("Query book count success !", result));
+	});
+});
+
+router.get('/query/info', function(req, res) {
+	bookService.queryBookInfo(req.query.bookID, function(result) {
+		res.json(msg.success("Query book info success !", result));
+	});
+});
+
+router.get('/query/update/info', function(req, res) {
+	bookService.queryBookInfoForUpdate(req.query.bookID, function(result) {
+		res.json(msg.success("Query book info for update success !", result));
+	});
+});
+
 
 module.exports = router;
